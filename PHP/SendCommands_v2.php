@@ -1,5 +1,5 @@
 <!-- PHP script for ONKYO AVR zones 2 and 3 powering on and subsequent volume state polling using Onkyo eISCP Control 
-library by Michael Elsdšrfer (http://blog.elsdoerfer.name, https://github.com/miracle2k)-->
+library by Michael Elsdörfer (http://blog.elsdoerfer.name, https://github.com/miracle2k)-->
 
 <?php
 
