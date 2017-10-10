@@ -51,7 +51,7 @@ $(function() {
 /*
 Power On/Off events for ONKYO AVR Main, Zone2 and Zone3 (currently disabled). 
 Main zone handled by RESTful Harmony API by BWS Systems(http://www.bwssystems.com, https://github.com/bwssytems), remaining zones 
-by PHP script over LAN using Onkyo eISCP Control library by Michael Elsdšrfer (http://blog.elsdoerfer.name, https://github.com/miracle2k)
+by PHP script over LAN using Onkyo eISCP Control library by Michael ElsdÅ¡rfer (http://blog.elsdoerfer.name, https://github.com/miracle2k)
 as Harmony does not provide response status with power and volume. Main could be covered by Harmony as it provides status in standby mode, 
 not only after Power On.
 Devices used by Harmony API must be defined in Logitech Harmony Hub.
@@ -311,9 +311,9 @@ $(function() {
             change = 0;
             param_string = "", harmony = "";
         
-        //Tablica z licznikiem klikniêæ VolumeUp i VolumeDown:
+        //Tablica z licznikiem klikniÃªÃ¦ VolumeUp i VolumeDown:
         volume_commands[single_command]++;
-        //Tablica z komendami do przes³ania do obiektu harmony:
+        //Tablica z komendami do przesÂ³ania do obiektu harmony:
         vol_commands_arr[clicks++] = single_command;
         if (clicks === 1) {
             timer = setTimeout(function() {
@@ -364,7 +364,7 @@ $(function() {
 
 /*
 Volume Sliders for ONKYO AVR Main, Zone2 and Zone3 (currently disabled). 
-Handled by PHP script over LAN using Onkyo eISCP Control library by Michael Elsdšrfer (http://blog.elsdoerfer.name,
+Handled by PHP script over LAN using Onkyo eISCP Control library by Michael ElsdÅ¡rfer (http://blog.elsdoerfer.name,
 https://github.com/miracle2k) as Harmony provides neither response status with power and volume, nor setting exact volume levels.
 */
 
