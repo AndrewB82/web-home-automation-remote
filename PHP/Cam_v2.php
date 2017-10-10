@@ -27,7 +27,7 @@ Foscam "GUEST" privilleges are sufficient in this case.  -->
 </ul>
 <div class="section" id="KameraDziewczynek">
     <div class="col-12 myCaption">Pokój Dziewczynek</div>
-<!-- //Below actual camera IP with port, camera login and password must be provided, user with Foscam "GUEST" privilleges is sufficient in this case. -->
+<!-- Below actual camera IP with port, camera login and password must be provided, user with Foscam "GUEST" privilleges is sufficient in this case. -->
     <div class="col-12"><img width="100%" src="http://<camera IP>:<camera port>/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=<login>&pwd=<password>&t=" name="refresh" id="refresh" onload='reload(this)' onerror='reload(this)'></div>
     <div class="col-20percent"><a id="ptzMoveLeft" class="myButtonBlue">&#x02c2</a></div>
     <div class="col-20percent"><a id="ptzMoveUp" class="myButtonBlue">&#x02c4</a></div>
