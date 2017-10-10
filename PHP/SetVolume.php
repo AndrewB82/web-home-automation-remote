@@ -1,4 +1,4 @@
-<!-- PHP script to set volume on ONKYO AVR over IP using Onkyo eISCP Control library by Michael Elsdšrfer 
+<!-- PHP script to set volume on ONKYO AVR over IP using Onkyo eISCP Control library by Michael ElsdÅ¡rfer 
 (http://blog.elsdoerfer.name, https://github.com/miracle2k). -->
 
 <?php
