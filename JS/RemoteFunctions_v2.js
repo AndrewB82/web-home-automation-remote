@@ -219,7 +219,7 @@ function setActiveLink(setActive) {
     showVolume("Volume"+setActive);
 }
 
-/*Function for sending commands to AVR over LAN using Onkyo eISCP Control library by Michael Elsdrfer
+/*Function for sending commands to AVR over LAN using Onkyo eISCP Control library by Michael Elsdörfer
 (http://blog.elsdoerfer.name, https://github.com/miracle2k). Most of them are deprecated in current version
 in favor of RESTful Harmony API by BWS Systems(http://www.bwssystems.com, https://github.com/bwssytems).
 Only Zone 2 powering toggle is using the function now.*/
@@ -277,7 +277,7 @@ function showVolume(volume){
     output.html(val);
 }
 
-/*Function for setting Specified Volume level on AVR over LAN using Onkyo eISCP Control library by Michael Elsdrfer
+/*Function for setting Specified Volume level on AVR over LAN using Onkyo eISCP Control library by Michael Elsdörfer
 (http://blog.elsdoerfer.name, https://github.com/miracle2k). Most of them are deprecated in current version
 in favor of RESTful Harmony API by BWS Systems(http://www.bwssystems.com, https://github.com/bwssytems).*/
 
