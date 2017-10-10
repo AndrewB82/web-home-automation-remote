@@ -1,0 +1,15 @@
+[Unit]
+Description=Node.js RFXtrx PS4 Http Server
+
+[Service]
+User=root
+Restart=always
+KillSignal=SIGQUIT
+#The line below specifies path where Node.js server file is located - replace <path> with your actual location.
+WorkingDirectory=<path>
+#The line below specifies path to the app itself - replace <path> with your actual location.
+ExecStart=<path>/homenodejsdaemon.js
+
+[Install]
+WantedBy=multi-user.target
+

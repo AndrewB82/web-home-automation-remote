@@ -1,0 +1,14 @@
+[Unit]
+Description=HA Bridge
+Wants=network.target
+After=network.target
+
+[Service]
+Type=simple
+#The line below specifies path where HA Bridge .jar file is located - replace <path> with your actual location.
+WorkingDirectory=<path>
+#The line below specifies HA Bridge config file you prefer to use and path to the app itself - replace <path> with your actual location.
+ExecStart=/usr/bin/java -jar -Dconfig.file=<path>/data/habridge.config <path>/ha-bridge-4.5.6.jar
+
+[Install]
+WantedBy=multi-user.target

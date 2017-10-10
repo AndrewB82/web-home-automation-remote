@@ -1,0 +1,14 @@
+[Unit]
+Description=RESTful Harmony
+Wants=network.target 
+After=network.target 
+
+[Service]
+Type=simple
+#The line below specifies path where Restful Harmony .jar file is located - replace <path> with your actual location.
+WorkingDirectory=<path> 
+#The line below specifies path to the app itself - replace <path> with your actual location, as well as your Harmony Hub ip - replace <Harmony Hub IP> with actual address.
+ExecStart=/usr/bin/java -jar <path>/restful-harmony-1.0.0.jar <Harmony Hub IP>
+
+[Install]
+WantedBy=multi-user.target
