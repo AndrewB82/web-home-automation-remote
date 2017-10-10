@@ -396,9 +396,9 @@ it is the default panel opened when the remote is opened,
 	    <div class="col-4"><a id="Netflix" class="myButtonBlue">Oglądaj<br>Netflix</a></div>
 	    <div class="col-4"></div>
 	    <div class="col-4"><a id="Bluetooth" class="myButtonBlue">Słuchaj<br>z bluetooth</a></div>
-	    <div class="col-4"><a id="Radio" class="myButtonBlue">Słuchaj radia internetowego</a></div>
+	    <div class="col-4"><a id="Radio" class="myButtonBlue">Słuchaj radia<br>internetowego</a></div>
 	    <div class="col-4"><a id="Bathroom" class="myButtonBlue">Słuchaj<br>w łazience</a></div>
-	    <div class="col-4"><a id="PS4" class="myButtonBlue">Uruchom PlayStation</a></div>
+	    <div class="col-4"><a id="PS4" class="myButtonBlue">Uruchom<br>PlayStation</a></div>
 	    <div class="col-4"></div>
 	    <div class="col-4"><a id="FIFA" class="myButtonBlue">Graj<br>w FIFĘ</a></div>
     </div>
