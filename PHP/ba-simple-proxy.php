@@ -3,8 +3,7 @@ but due to cross-domain requests issue I did not figue out how to reach it direc
 script: credit to Ben Alman (http://benalman.com/code/projects/php-simple-proxy/docs/ , 
 https://github.com/cowboy/php-simple-proxy ).
 
-WARNING: For the script to work I needed to add Fibaro HC2 credentials - look for AMENDMENT keyword in the script below.
--->
+WARNING: For the script to work I needed to add Fibaro HC2 credentials - look for AMENDMENT keyword in the script below.-->
 
 <?PHP
 
