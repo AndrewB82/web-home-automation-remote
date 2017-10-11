@@ -58,4 +58,5 @@ The following software was used in the project and installed on Raspberry Pi:
 - Python3-dev package,
 - [ONKYO-eISCP package](https://github.com/miracle2k/onkyo-eiscp) by and credited to Michael Elsdörfer - [@miracle2k](https://github.com/miracle2k),
 - [HA Bridge](https://github.com/bwssystems/ha-bridge) by and credited to BWS Systems - [@bwssystems](https://github.com/bwssystems),
-- [RESTful Harmony API](https://github.com/bwssystems/restful-harmony) by and credited to BWS Systems - [@bwssystems](https://github.com/bwssystems).
+- [RESTful Harmony API](https://github.com/bwssystems/restful-harmony) by and credited to BWS Systems - [@bwssystems](https://github.com/bwssystems),
+- [PHP proxy script](https://github.com/cowboy/php-simple-proxy) by and credited to Ben Alman - [@cowboy](https://github.com/cowboy).
