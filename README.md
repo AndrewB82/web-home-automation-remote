@@ -50,12 +50,12 @@ The following software was used in the project and installed on Raspberry Pi:
 - Serialport Node module,
 - Queue Node module,
 - [RFXcom Node module](https://github.com/rfxcom/node-rfxcom) (deprecated, not used in current version) by and credited to Maxwell Hadley - @rfxcom,
-- [PS4-waker Node module](https://github.com/dhleong/ps4-waker) by and credited to Daniel Leong - @dhleong ,
+- [PS4-waker Node module](https://github.com/dhleong/ps4-waker) by and credited to Daniel Leong - [@dhleong](https://github.com/dhleong),
 - Apache2 web server,
 - PHP5,
 - PHP5 cURL,
 - Python3 package,
 - Python3-dev package,
-- [ONKYO-eISCP package](https://github.com/miracle2k/onkyo-eiscp) by and credited to Michael Elsdörfer - @miracle2k,
-- [HA Bridge](https://github.com/bwssystems/ha-bridge) by and credited to BWS Systems - @bwssystems,
-- [RESTful Harmony API](https://github.com/bwssystems/restful-harmony) by and credited to BWS Systems - @bwssystems.
+- [ONKYO-eISCP package](https://github.com/miracle2k/onkyo-eiscp) by and credited to Michael Elsdörfer - [@miracle2k](https://github.com/miracle2k),
+- [HA Bridge](https://github.com/bwssystems/ha-bridge) by and credited to BWS Systems - [@bwssystems](https://github.com/bwssystems),
+- [RESTful Harmony API](https://github.com/bwssystems/restful-harmony) by and credited to BWS Systems - [@bwssystems](https://github.com/bwssystems).
