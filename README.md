@@ -62,3 +62,4 @@ The following software was used in the project and installed on Raspberry Pi:
 - Modified [PHP proxy script](https://github.com/cowboy/php-simple-proxy) by and credited to Ben Alman - [@cowboy](https://github.com/cowboy),
 - Modified [cie_rgb_converter.js script](https://github.com/usolved/cie-rgb-converter) by and credited to Ricardo Klement - [@usolved](https://github.com/usolved),
 - ColorPicker and ColorCursor classes largely using code from this [stackoverflow.com question](https://stackoverflow.com/questions/41844110/ploting-rgb-or-hex-values-on-a-color-wheel-using-js-canvas) and corresponding [jsfiddle](http://jsfiddle.net/havdto6e/4/) - credited to [this guy](https://stackoverflow.com/users/1579780/giladd),
+- color picker mouse tracking with touchscreen capabilities largely credited to http://zipso.net , specifically to: https://zipso.net/a-simple-touchscreen-sketchpad-using-javascript-and-html5/,
