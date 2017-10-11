@@ -20,7 +20,7 @@ Foscam "GUEST" privilleges are sufficient in this case.  -->
     <li class="col-4"><a id="UPC" class="myButtonYellow" href="/BrowarRemote_v2.php">UPC</a></li>	
     <li class="col-4"><a id="MediaPlayer" class="myButtonYellow" href="/BrowarRemote_v2.php">Media Player</a></li>
     <li class="col-4"><a id="TV" class="myButtonYellow" href="/BrowarRemote_v2.php">TV</a></li>
-    <li class="col-4"><a id="Playstation" class="myButtonYellow" href="/BrowarRemote_v2.php">PS3</a></li>
+    <li class="col-4"><a id="PlayStation" class="myButtonYellow" href="/BrowarRemote_v2.php">PS4</a></li>
     <li class="col-4"><a id="Dom" class="myButtonYellow active" href="/BrowarRemote_v2.php">Dom</a></li>
     <li class="col-6"><a id="Kamera" class="myButtonYellow">Kamera</a></li>
     <li class="col-6"><a id="Sceny" class="myButtonYellow" href="/BrowarRemote_v2.php">Sceny</a></li>
