@@ -43,7 +43,7 @@ The following devices are used in the project:
 - Foscam FI9816P v. 2 IP camera.
 
 ### Software
-The following software was used in the project and installed on Raspberry Pi:
+The following software was used in the project, installed on Raspberry Pi, or embedded in the code:
 - Raspbian Jessie OS,
 - Domoticz Home Automation System,
 - Node.js,
