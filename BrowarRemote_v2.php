@@ -1,15 +1,14 @@
 ﻿<!DOCTYPE html>
 <!--
 Main site of the project, covering most panels:
-- "Dom" - Polish word for "Home" - RF Devices, namely multimedia center power strip, window blinds 
-and tested smart socket, as well as Hue and z-wave lighting and z-wave theromostats are covered here,
-it is the default panel opened when the remote is opened,
-- "Amplituner" - my AVR remote with multizone covered (second - Bathroom - and third zones are opened when activated),
-- "UPC" - cable TV service remote,
-- "Media Player" - media player remote,
-- "TV" - TV remote with only TV power toggle implemented, as other media operations are handled by AVR,
-- "PS4" - Sony Plasystation 4 remote with Power On, Power Off, and PS long press included,
-- "Kamera" - IP camera live view with controls,
+- "Dom" - Polish word for "Home" - here user can control RF Devices, namely entertainment center power strip, window blinds and 
+tested smart socket, as well as Philips Hue and z-wave lighting and z-wave theromostats; it is the default panel opened when 
+the app is initiated,
+- "Amplituner" - AVR remote with multizone covered (second zone - Bathroom - and third zone are opened when activated, third zone
+not implemented currently),
+- "UPC" - cable TV service remote,"Media Player" - media player remote,
+- "TV" - remote with only TV power toggle implemented, as other media operations are handled by AVR,
+- "PS4" - Sony Plasystation 4 remote with Power On, Power Off, and PS button long press included,
 - "Sceny" - Polish word for "Scenes" - currrently starting of Harmony Activities is implemented.
 -->
 
