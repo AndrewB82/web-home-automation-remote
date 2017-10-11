@@ -66,3 +66,9 @@ The following software was used in the project, installed on Raspberry Pi, or em
 - CountDown function with small amendments using code from [W3schools](https://www.w3schools.com): https://www.w3schools.com/howto/howto_js_countdown.asp,
 - function for getting parameter from URL by and credited to [JQUERYBYEXAMPLE](http://www.jquerybyexample.net/), http://www.jquerybyexample.net/2012/06/get-url-parameters-using-jquery.html,
 - functions for embedding and handling IP camera live view, credited to [the Mad Hermit](http://www.themadhermit.net), http://www.themadhermit.net/how-to-embed-video-from-your-foscam-fi9821w-wireless-camera-into-your-web-page/.
+
+## Installation
+
+## Usage
+
+## To dos
