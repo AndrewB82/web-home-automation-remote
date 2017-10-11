@@ -70,4 +70,4 @@ The following software was used in the project, installed on Raspberry Pi, or em
 
 ## Usage
 
-## To dos
+## To-dos
