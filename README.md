@@ -41,3 +41,21 @@ The following devices are used in the project:
 - Sony Bravia TV KDL-40W5500,
 - Sony PlayStation 4,
 - Foscam FI9816P v. 2 IP camera.
+
+### Software
+The following software was used in the project and installed on Raspberry Pi:
+- Raspbian Jessie OS,
+- Domoticz Home Automation System,
+- Node.js,
+- Serialport Node module,
+- Queue Node module,
+- RFXcom Node module (deprecated, not used in current version),
+- PS4-waker Node module,
+- Apache2 web server,
+- PHP5,
+- PHP5 cURL,
+- Python3 package,
+- Python3-dev package,
+- ONKYO-eISCP package,
+- HA Bridge,
+- RESTful Harmony API.
