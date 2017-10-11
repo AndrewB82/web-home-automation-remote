@@ -38,7 +38,6 @@ The following devices are used in the project:
 - ONKYO TX-NR616 AVR,
 - UPC Mediabox - cable STB,
 - WD TV Media Player,
-- Sony Bravia TV KDL-40W5500,
 - Sony PlayStation 4,
 - Foscam FI9816P v. 2 IP camera.
 
