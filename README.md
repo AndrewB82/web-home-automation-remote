@@ -69,5 +69,17 @@ The following software was used in the project, installed on Raspberry Pi, or em
 ## Installation
 
 ## Usage
+The app is divided into panels:
+- "Dom" - Polish word for "Home" - here user can control RF Devices, namely entertainment center power strip, window blinds and tested smart socket, as well as Philips Hue and z-wave lighting and z-wave theromostats; **it is the default panel opened when the app is initiated**,
+- "Amplituner" - AVR remote with multizone covered (second zone - Bathroom - and third zone are opened when activated, third zone not implemented currently),
+- "UPC" - cable TV service remote,
+- "Media Player" - media player remote,
+- "TV" - remote with only TV power toggle implemented, as other media operations are handled by AVR,
+- "PS4" - Sony Plasystation 4 remote with Power On, Power Off, and PS button long press included,
+- "Kamera" - IP camera live view with controls,
+- "Sceny" - Polish word for "Scenes" - currrently starting of Harmony Activities is implemented.
 
 ## To-dos
+1. Security issues.
+2. Migration of remaining functions from using [ONKYO-eISCP package](https://github.com/miracle2k/onkyo-eiscp) to [eISCP Node module](https://github.com/tillbaks/node-eiscp) by and credited to [@tillbaks](https://github.com/tillbaks).
+3. Project rewriting and code optimization.
