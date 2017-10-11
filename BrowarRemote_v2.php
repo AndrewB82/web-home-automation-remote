@@ -10,7 +10,7 @@ it is the default panel opened when the remote is opened,
 - "TV" - TV remote with only TV power toggle implemented, as other media operations are handled by AVR,
 - "PS4" - Sony Plasystation 4 remote with Power On, Power Off, and PS long press included,
 - "Kamera" - IP camera live view with controls,
-- "Sceny" - Polish word for "Scenes" - currrently starting of Harmony Activities are implemented.
+- "Sceny" - Polish word for "Scenes" - currrently starting of Harmony Activities is implemented.
 -->
 
 <html>
