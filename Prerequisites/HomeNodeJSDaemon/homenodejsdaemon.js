@@ -3,15 +3,15 @@
 //Below the path to ps4-waker Node.js module installed globally, replace the path with your actual loaction of the module.
 const {Device} = require('/usr/lib/node_modules/ps4-waker');
 
-//Below line is commented because in current version of my remote (v2) RFXtrx Node.js module is disabled 
-//- RF devices work through Domoticz in order to secure Homebridge HomeKit emulation.
-//I left the code to have RFXcom library as an alternative to Domoticz. There may be issue, however:
-//for my devices to work with the server, I had to slightly amend lighting4.js and lighting5.js files 
-//in the module. It was tested and worked fine with node-rfxcom module (https://github.com/rfxcom/node-rfxcom)
-//version installed around June 2017. I noticed that since then the owner of the repository conducted significant
-//changes to the module and my server was not tested with the current version. Amended versions of lighting4.js 
-//and lighting5.js can be found in repository if someone was interested in using them - amendments were made
-//to var buffer.
+/*Line below is commented because in current version of my remote (v2) RFXtrx Node.js module is disabled 
+- RF devices work through Domoticz in order to secure Homebridge HomeKit emulation.
+I left the code to have RFXcom library as an alternative to Domoticz. There may be issue, however:
+for my devices to work with the server, I had to slightly amend lighting4.js and lighting5.js files 
+in the module. It was tested and worked fine with node-rfxcom module (https://github.com/rfxcom/node-rfxcom)
+version installed around June 2017. I noticed that since then the owner of the repository conducted significant
+changes to the module and my server was not tested with the current version. Amended versions of lighting4.js 
+and lighting5.js can be found in repository if someone was interested in using them - amendments were made
+to var buffer.*/
 
 //var rfxcom = require('/home/pi/node_modules/rfxcom');
 var http = require('http');
@@ -32,9 +32,9 @@ var http = require('http');
     
     sockets = {}, nextSocketId = 0;
     
-    //Below object with functions called when certain requests are caught by the server, 
-    //each function calls proper remote tp send command to RF device or PS4 (in this case PowerOn, PowerOff,
-    //StartNetflix, StartFIFA18).
+    /*Object with functions called when certain requests are caught by the server, 
+    each function calls proper remote to send command to RF device or PS4 (in this case PowerOn, PowerOff,
+    StartNetflix, StartFIFA18)/*/
     ha_commands = {
         /*
         ListwaOn: function() { listwa.sendData("0x555557","0x0142"); },
