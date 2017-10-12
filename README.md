@@ -74,8 +74,9 @@ The app is divided into panels:
 - "PS4" - Sony Plasystation 4 remote with **Power On, Power Off, and PS button long press included**,
 - "Kamera" - IP camera live view with controls,
 - "Sceny" - Polish word for "Scenes" - currrently starting of Harmony Activities is implemented.
-## To-dos
+## Potential development areas
 1. Security issues.
 2. Migration of remaining functions from using [ONKYO-eISCP package](https://github.com/miracle2k/onkyo-eiscp) to [eISCP Node module](https://github.com/tillbaks/node-eiscp) by and credited to [@tillbaks](https://github.com/tillbaks).
 3. Project rewriting and code optimization.
 4. Translation of the GUI from Polish to English.
+5. HUE API user creation.
