@@ -13,9 +13,7 @@ The app allows to control devices from devices in LAN. Communications that are c
 - z-wave via Fibaro Home Center 2 gateway,
 - zigbee lighting via Philips Hue Bridge,
 - camera "live view" and control over IP.
-
 ## Prerequisites
-
 ### Hardware
 #### Controllers / Hubs / Gateways
 The following devices are used in the project:
@@ -40,7 +38,6 @@ The following devices are used in the project:
 - WD TV Media Player,
 - Sony PlayStation 4,
 - Foscam FI9816P v. 2 IP camera.
-
 ### Software
 The following software was used in the project, installed on Raspberry Pi, or embedded in the code:
 - Raspbian Jessie OS,
@@ -65,7 +62,6 @@ The following software was used in the project, installed on Raspberry Pi, or em
 - CountDown function with small amendments using code from [W3schools](https://www.w3schools.com): https://www.w3schools.com/howto/howto_js_countdown.asp,
 - function for getting parameter from URL by and credited to [JQUERYBYEXAMPLE](http://www.jquerybyexample.net/), http://www.jquerybyexample.net/2012/06/get-url-parameters-using-jquery.html,
 - functions for embedding and handling IP camera live view, credited to [the Mad Hermit](http://www.themadhermit.net), http://www.themadhermit.net/how-to-embed-video-from-your-foscam-fi9821w-wireless-camera-into-your-web-page/.
-
 ## Installation
 
 ## Usage
@@ -78,7 +74,6 @@ The app is divided into panels:
 - "PS4" - Sony Plasystation 4 remote with **Power On, Power Off, and PS button long press included**,
 - "Kamera" - IP camera live view with controls,
 - "Sceny" - Polish word for "Scenes" - currrently starting of Harmony Activities is implemented.
-
 ## To-dos
 1. Security issues.
 2. Migration of remaining functions from using [ONKYO-eISCP package](https://github.com/miracle2k/onkyo-eiscp) to [eISCP Node module](https://github.com/tillbaks/node-eiscp) by and credited to [@tillbaks](https://github.com/tillbaks).
