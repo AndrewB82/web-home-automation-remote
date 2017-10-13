@@ -265,7 +265,8 @@ sudo systemctl start restfulharmony.service
 It is a brilliant tool that complements and supports your own home automation system. It emulates Philips Hue bridge behind which one can embak almost every kind of device able to communicate over network.
 They are all seen as Philips Hue lights operated by On, Off and Dim commands for which you can assign various network requests.
 For installation follow guide at: https://github.com/bwssytems/ha-bridge.
-I simply downloaded the .jar file. You should also pay special attention to the section "Run ha-bridge alongside web server already on port 80".
+For the need of the project I simply downloaded the .jar file. 
+You should also pay special attention to the section ["Run ha-bridge alongside web server already on port 80"](https://github.com/bwssytems/ha-bridge#run-ha-bridge-alongside-web-server-already-on-port-80).
 
 IMPORTANT: running for the first time from command line, I used port number parameter -Dserver.port=<port number> as HA Bridge runs on default port 80 and there is already Apache listening on that port, and Domoticz listening on 8080:
 ```
