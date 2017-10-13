@@ -66,10 +66,10 @@ The following software was used in the project, installed on Raspberry Pi, or em
 WARNING: it is assumed that "sudo" prefix is required for conducting setup operations (non-root user).
 ### Raspbian update
 At first Raspberry OS should be updated from the command line:
-'''
+```
 sudo apt-get update
 sudo apt-get upgrade
-'''
+```
 ### Domoticz
 I followed below tutorials for installation:
 - [Initial Raspberry Pi Setup](https://www.domoticz.com/wiki/Initial_Raspberry_Pi_Setup) - for Pi preparation,
@@ -79,9 +79,9 @@ I followed below tutorials for installation:
 
 WARNING: base64 encoded Domoticz credentials in JSON format are required for using Domoticz REST Api - they should be filled in the code,  
 sample credentials http header should look like this:
-'''json
+```json
 {"Authorization":"Basic <base64 encoded login:password>"}
-'''
+```
 "login:password" string encoding can be performed at e.g. https://codebeautify.org/base64-encode.
 
 For http requests to be correctly specified, you would need to retrieve device information from Domoticz API. Instructions can be found at: https://www.domoticz.com/wiki/Domoticz_API/JSON_URL's.
@@ -89,117 +89,115 @@ For http requests to be correctly specified, you would need to retrieve device i
 It can be worked around to some extent whem using HA Bridge (see below).  
 ### Node.js
 I followed this tutorial for installation - the most current version is installed as a result: [Beginner’s Guide to Installing Node.js on a Raspberry Pi](http://thisdavej.com/beginners-guide-to-installing-node-js-on-a-raspberry-pi/) by [Dave Johnson - @thisDaveJ](https://twitter.com/thisDaveJ).
-## RFXtrx433E transceiver - when there is no Domoticz server
+## RFXtrx433E transceiver - if there is no Domoticz server
 DEPRECATED in current version of the project - setup is finalised through Domoticz.
 
 RFXtrx433E transceiver is most easily configurable using PC running on Windows. User would probably need to install
 USB driver to connect the device to the PC. Once it is done, the transceiver firmware can be updated using RFXflash
-application and setup can be done using RFXmngr application. User can find further details in RFXtrx433E manual which
+application and setup can be done using RFXmngr application. User can find further details in RFXtrx433E manual, which 
 can be found in this repository (Prerequisites folder).
 
-Following devices were set up in RFXmngr:
-- power strip with entertainment center connected: 
-* type: "Lighting4", 
-* subtype: "PT2262", 
-* "off" code: 555554, dec 5592404, S1-S24: 0101 0101 0101 0101 0101 0100, pulse 322,
-* "on" code: 555557, dec 5592407, S1-S24: 0101 0101 0101 0101 0101 0111, pulse 322,
-- smart socket with humifier connected: 
-* type: "Lighting5", 
-* subtype:"Kangtai, Cotech",
-* unit: "1",
-* ID: "5D0C",
-* commands: "on", "off".
-- window blind motors:
-* type: "Blinds1",
-* subtype: "BlindsT6",
-* ID (chosen by user preferences): XX XX XX X,
-* unit codes: "0" - all devices in the group, "1"-"3" - blinds in particular rooms,
-* commands: "open", "close", "stop", "confirm" (this one for remote setup - user can find remote manual in this repository's Prerequisites folder).
-
-
-For my needs only Lighting4 and Lighting5 protocols are enabled in RFXmngr app.
+For the needs of the project only Lighting4 and Lighting5 protocols are enabled in RFXmngr app.
 
 Installation of RFXcom Node module with necessary dependencies:
-'''
+```
 sudo npm install serialport --unsafe-perm
 sudo npm install queue
 sudo npm install rfxcom --unsafe-perm
-'''
-For my devices to work with the server, I had to slightly amend lighting4.js and lighting5.js files 
+```
+For project devices to work with the server, I had to slightly amend lighting4.js and lighting5.js files 
 in the RFXcom Node module. It was tested and worked fine with node-rfxcom module (https://github.com/rfxcom/node-rfxcom)
 version installed in June 2017. I noticed that since then the owner of the repository introduced significant
 changes to the module and my server was not tested with the current version. Amended versions of lighting4.js 
 and lighting5.js can be found in repository if someone was interested in using them - amendments were made
 to var buffer.
 
-/home/<actual user>/node_modules/rfxcom/lib/lighting4.js var buffer modified version:
-'''javascript
+```/home/<actual user>/node_modules/rfxcom/lib/lighting4.js``` var buffer modified version:
+```javascript
 var buffer = [0x09, defines.LIGHTING4, self.subtype, seqnbr,data[0], data[1], data[2], pulseWidth[0], pulseWidth[1], 0x70];
-'''
-/home/<actual user>/node_modules/rfxcom/lib/lighting5.js var buffer modified version:
-'''javascript
+```
+```/home/<actual user>/node_modules/rfxcom/lib/lighting5.js``` var buffer modified version:
+```javascript
 var buffer = [0x0a, defines.LIGHTING5, 0x11, seqnbr,device.idBytes[0], device.idBytes[1], device.idBytes[2],device.unitCode, command, 0, 0x60];
-'''
+```
+Following devices were set up in RFXmngr:
+- power strip with entertainment center connected: 
+ - type: "Lighting4", 
+ - subtype: "PT2262", 
+ - "off" code: 555554, dec 5592404, S1-S24: 0101 0101 0101 0101 0101 0100, pulse 322,
+ - "on" code: 555557, dec 5592407, S1-S24: 0101 0101 0101 0101 0101 0111, pulse 322,
+- smart socket with humifier connected: 
+ - type: "Lighting5", 
+ - subtype:"Kangtai, Cotech",
+ - unit: "1",
+ - ID: "5D0C",
+ - commands: "on", "off".
+- window blind motors:
+ - type: "Blinds1",
+ - subtype: "BlindsT6",
+ - ID (chosen by user preferences): XX XX XX X,
+ - unit codes: "0" - all devices in the group, "1"-"3" - blinds in particular rooms,
+ - commands: "open", "close", "stop", "confirm" (this one for remote setup - user can find remote manual in this repository's Prerequisites folder.
 ### Web Server
 Apache server with PHP and PHP cURL are used by the project to host the app:
-'''
+```
 sudo apt-get install apache2 -y
 sudo apt-get install php5 libapache-mod-php5 -y
 sudo apt-get install php5-curl
-'''
-Change owner of the /usr/www folder to actual user:
-'''
+```
+Change owner of the ```/usr/www``` folder to actual user:
+```
 sudo chown <actual user> /usr/www -R
-'''
-All files from main folder of the repository, except of Prerequistes folder, should be put in '''/usr/www'''. 
+```
+All files from main folder of the repository, except of Prerequistes folder, should be put in ```/usr/www```. 
 ### ONKYO eISCP
 Installation of ONKYO eISCP package with necessary dependencies. Only power and volume querying, dependant zones power on/off and setting specified volume level use this package currently.
-'''
+```
 sudo apt-get install python3-pip
 sudo apt-get install python-dev
 sudo pip3 install onkyo-eiscp
-'''
+```
 For the onkyo script to work from a browser, a modification to Sudoers File must be done. Open from command line:
-'''
+```
 sudo visudo
-'''
+```
 Add this line in "User privillege section", take into account your actual path to the onkyo script.
-'''
+```
 www-data ALL=NOPASSWD: www-data ALL=NOPASSWD: /usr/local/bin/onkyo
-'''
+```
 ### PS4-waker Node module
 Install the module:
-'''
+```
 sudo npm install ps4-waker -g
-'''
+```
 You have to pair the Raspberry Pi with iOs (tested by myself) or Android (not tested by myself) Sony PlayStation App. 
 Run the app for the first time from command line:
-'''
+```
 sudo ps4-waker
-'''
+```
 Turn on your PS4 and go to "Add Device" tab in "Settings" section and follow on-screen instruction to pair.
 
-After finishing setup, check if you see Raspberry as a device in your PS4 systems and whether credentials file is created correctly - .ps4-wake.credentials.json - it is a hidden file and should be located in user's home folder. The file should look like this:
-'''json
+After finishing setup, check if you see Raspberry as a device in your PS4 systems and whether credentials file is created correctly - ```.ps4-wake.credentials.json``` - it is a hidden file and should be located in user's home folder. The file should look like this:
+```json
 { 
  	"client-type": "X", 
 	"auth-type": "Y", 
 	"user-credential": "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
 } 
-'''
+```
 ### Node.js Home Server
 It is used for handling PS4 Power On/Off and application starting functions. Formerly I used it also to handle RF devices. 
 It is a http server that listens for requests assigned to those functions.
-Download the '''homenodejsdaemon.js''' file from Prerequisites and put it in preferred folder.
+Download the ```homenodejsdaemon.js``` file from Prerequisites and put it in preferred folder.
 #### Run at startup
 The server should run automatically at startup, so system service should be set up:
-'''
+```
 cd /etc/systemd/system
 sudo nano homenodejsdaemon.service
-'''
+```
 Below is a template for the service from my project. The file can be found in this repository in the Prereqisites folder,
 you can fill your parameters and paste it in nano editor.
-'''
+```
 [Unit]
 Description=Node.js RFXtrx PS4 Http Server
 
@@ -214,14 +212,14 @@ ExecStart=<path>/homenodejsdaemon.js
 
 [Install]
 WantedBy=multi-user.target
-'''
+```
 Save by CTL-X.
 To start the service and enable it at boot:
-'''
+```
 sudo systemctl daemon-reload
 sudo systemctl enable homenodejsdaemon.service
 sudo systemctl start homenodejsdaemon.service
-'''
+```
 HINT: starting apps on PS4 requires passing app ID as a parameter. ID's can be found in PlayStation Store in URL:
 simply open desired app page and check URL: ID should have format: '''CUSAXXXXX'''. For the project I used following IDs:
 - Netflix - "CUSA00127",
@@ -234,13 +232,13 @@ I simply downloaded the .jar file.
 In the project it is used for handling IR remotes button press functions as well as Harmony Activities initiating.
 #### Run at startup
 The server should run automatically at startup, so system service should be set up:
-'''
+```
 cd /etc/systemd/system
 sudo nano homenodejsdaemon.service
-'''
+```
 Below is a template for the service from my project. The file can be found in this repository in the Prereqisites folder,
 you can fill your parameters and paste it in nano editor.
-'''
+```
 [Unit]
 Description=RESTful Harmony
 Wants=network.target 
@@ -255,14 +253,14 @@ ExecStart=/usr/bin/java -jar <path>/restful-harmony-1.0.0.jar <Harmony Hub IP>
 
 [Install]
 WantedBy=multi-user.target
-'''
+```
 Save by CTL-X.
 To start the service and enable it at boot:
-'''
+```
 sudo systemctl daemon-reload
 sudo systemctl enable restfulharmony.service
 sudo systemctl start restfulharmony.service
-'''
+```
 ### HA Bridge
 It is a brilliant tool that complements and supports your own home automation system. It emulates Philips Hue bridge behind which one can embak almost every kind of device able to communicate over network.
 They are all seen as Philips Hue lights operated by On, Off and Dim commands for which you can assign various network requests.
@@ -270,26 +268,26 @@ For installation follow guide at: https://github.com/bwssytems/ha-bridge.
 I simply downloaded the .jar file. You should also pay special attention to the section "Run ha-bridge alongside web server already on port 80".
 
 IMPORTANT: running for the first time from command line, I used port number parameter -Dserver.port=<port number> as HA Bridge runs on default port 80 and there is already Apache listening on that port, and Domoticz listening on 8080:
-'''
+```
 /usr/bin/java -jar -Dserver.port=<port number> <actual path>/ha-bridge-W.X.Y.jar
-'''
+```
 
 The bridge has decent GUI where you can configure your phisical Philips Hue bridge, Logitech Harmony Hub, Domoticz devices and few others. When done, it has build helpers to set up HA bridge virtual devices.
 
-For the project, I used HA bridge for:
+For the project, HA Bridge was used for:
 - Harmony button press functionality to emulate Sony Playstation 4 PS button long press,
 - having Domoticz devices set up, one can see URL's that are necessary to control Domoticz devices via API - this is a workaround mentioned above,
 - EXTRA FEATURE: having set up RF devices as http devices in HA Bridge opens your RF devices for Alexa voice control,
 - EXTRA FEATURE: having Node.js server + PS4-waker module listening, I set up HA bridge htpp devices that start apps on my PlayStation 4 by voice, i.e. Netflix and Fifa18.
 #### Run at startup
 The most convenient way of using HA Bridge is to set up a system service to start at boot:
-'''
+```
 cd /etc/systemd/system
 sudo nano habridge.service
-'''
+```
 Below is a template for the service from my project, based on the one found in [the guide](https://github.com/bwssytems/ha-bridge). The file can be found in this repository in the Prereqisites folder,
 you can fill your parameters and paste it in nano editor.
-'''
+```
 [Unit]
 Description=HA Bridge
 Wants=network.target
@@ -304,30 +302,32 @@ ExecStart=/usr/bin/java -jar -Dconfig.file=<path>/data/habridge.config <path>/ha
 
 [Install]
 WantedBy=multi-user.target
-'''
+```
 Save by CTL-X.
 To start the service and enable it at boot:
-'''
+```
 sudo systemctl daemon-reload
 sudo systemctl enable habridge.service
 sudo systemctl start habridge.service
-'''
+```
 ### Philips Hue API
 For the app to work, you have to create an authorized user with your Hue Bridge. It can be implemented in the app, as far as I know, but it is not necessary for my needs, so maybe in the future.
 At first you have to create an account at [Hue Developer Program](https://developers.meethue.com): https://developers.meethue.com.
 The Hue API is then available at:
+```
 http://<bridge ip address>/debug/clip.html
+```
 To create a user you have to fill the form with following values:
-URL: http://<bridge ip address>/api,
+URL: ```http://<bridge ip address>/api```,
 Message Body:
-'''json
+```json
 {"devicetype":"my_hue_app#<device> <user name>"}
-'''
+```
 A POST request should be sent, and username will be returned in response. 
 It must be implemented in the code and used in every Hue Api request sending commands to Hue and compatible lighting, e.g.:
-'''
+```
 http://<bridge ip address>/api/<username>/lights
-'''
+```
 For further Hue API instructions go to: https://developers.meethue.com/documentation/getting-started.
 ## Usage
 The app is divided into panels:
