@@ -86,7 +86,7 @@ sample credentials http header should look like this:
 
 For http requests to be correctly specified, you would need to retrieve device information from Domoticz API. Instructions can be found at: https://www.domoticz.com/wiki/Domoticz_API/JSON_URL's.
 
-It can be worked around to some extent when using [HA Bridge (see below)](#HA Bridge).  
+It can be worked around to some extent when using [HA Bridge (see below)](#ha-bridge).  
 ### Node.js
 I followed this tutorial for installation - the most current version is installed as a result: [Beginner’s Guide to Installing Node.js on a Raspberry Pi](http://thisdavej.com/beginners-guide-to-installing-node-js-on-a-raspberry-pi/) by [Dave Johnson - @thisDaveJ](https://twitter.com/thisDaveJ).
 ## RFXtrx433E transceiver - if there is no Domoticz server
