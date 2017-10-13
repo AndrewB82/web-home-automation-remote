@@ -277,7 +277,7 @@ The bridge has decent GUI where you can configure your phisical Philips Hue brid
 
 For the project, HA Bridge was used for:
 - Harmony button press functionality to emulate Sony Playstation 4 PS button long press,
-- having Domoticz devices set up, one can see URL's that are necessary to control Domoticz devices via API - this is a [workaround mentioned above](domoticz#),
+- having Domoticz devices set up, one can see URL's that are necessary to control Domoticz devices via API - this is the [workaround mentioned above](domoticz#),
 - EXTRA FEATURE: having set up RF devices as http devices in HA Bridge opens your RF devices for Alexa voice control,
 - EXTRA FEATURE: having Node.js server + PS4-waker module listening, I set up HA bridge htpp devices that start apps on my PlayStation 4 by voice, i.e. Netflix and Fifa18.
 #### Run at startup
