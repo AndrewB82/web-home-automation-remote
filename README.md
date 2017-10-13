@@ -1,4 +1,4 @@
-﻿# Web Home Automation Remote
+# Web Home Automation Remote
 Web app for controlling different protocol based home devices in one place.
 
 I am a hobby programmer, who learnt to write this project from a scratch. Half a year ago I did not know either what Raspberry Pi or Git is. Neither did I know JavaScript syntax at all as I had built my last (and only, laying WordPress experiments aside) website when there were still dinosaurs on Earth and HTML4 entered the scene on a white horse back in 1997. Therefore the project is nothing close to a clean code, it is just the result of my how-to-code learning curve steepening.
@@ -82,11 +82,11 @@ sample credentials http header should look like this:
 ```json
 {"Authorization":"Basic <base64 encoded login:password>"}
 ```
-"login:password" string encoding can be performed at e.g. https://codebeautify.org/base64-encode.
+```"login:password"``` string encoding can be performed at e.g. https://codebeautify.org/base64-encode.
 
 For http requests to be correctly specified, you would need to retrieve device information from Domoticz API. Instructions can be found at: https://www.domoticz.com/wiki/Domoticz_API/JSON_URL's.
 
-It can be worked around to some extent whem using HA Bridge (see below).  
+It can be worked around to some extent when using [HA Bridge (see below)].  
 ### Node.js
 I followed this tutorial for installation - the most current version is installed as a result: [Beginner’s Guide to Installing Node.js on a Raspberry Pi](http://thisdavej.com/beginners-guide-to-installing-node-js-on-a-raspberry-pi/) by [Dave Johnson - @thisDaveJ](https://twitter.com/thisDaveJ).
 ## RFXtrx433E transceiver - if there is no Domoticz server
@@ -97,7 +97,7 @@ USB driver to connect the device to the PC. Once it is done, the transceiver fir
 application and setup can be done using RFXmngr application. User can find further details in RFXtrx433E manual, which 
 can be found in this repository (Prerequisites folder).
 
-For the needs of the project only Lighting4 and Lighting5 protocols are enabled in RFXmngr app.
+For the needs of the project only ```Lighting4``` and ```Lighting5``` protocols are enabled in RFXmngr app.
 
 Installation of RFXcom Node module with necessary dependencies:
 ```
@@ -108,8 +108,8 @@ sudo npm install rfxcom --unsafe-perm
 For project devices to work with the server, I had to slightly amend lighting4.js and lighting5.js files 
 in the RFXcom Node module. It was tested and worked fine with node-rfxcom module (https://github.com/rfxcom/node-rfxcom)
 version installed in June 2017. I noticed that since then the owner of the repository introduced significant
-changes to the module and my server was not tested with the current version. Amended versions of lighting4.js 
-and lighting5.js can be found in repository if someone was interested in using them - amendments were made
+changes to the module and my server was not tested with the current version. Amended versions of ```lighting4.js``` 
+and ```lighting5.js``` can be found in repository if someone was interested in using them - amendments were made
 to var buffer.
 
 ```/home/<actual user>/node_modules/rfxcom/lib/lighting4.js``` var buffer modified version:
