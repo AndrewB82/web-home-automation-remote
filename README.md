@@ -45,7 +45,7 @@ The following software was used in the project, installed on Raspberry Pi, or em
 - Node.js,
 - Serialport Node module,
 - Queue Node module,
-- [RFXcom Node module](https://github.com/rfxcom/node-rfxcom) (deprecated, not used in current version) by and credited to Maxwell Hadley - [@rfxcom](https://github.com/rfxcom),,
+- [RFXcom Node module](https://github.com/rfxcom/node-rfxcom) (deprecated, not used in current version) by and credited to Maxwell Hadley - [@rfxcom](https://github.com/rfxcom),
 - [PS4-waker Node module](https://github.com/dhleong/ps4-waker) by and credited to Daniel Leong - [@dhleong](https://github.com/dhleong),
 - Apache2 web server,
 - PHP5,
