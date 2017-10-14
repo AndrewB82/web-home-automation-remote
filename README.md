@@ -45,7 +45,7 @@ The following software was used in the project, installed on Raspberry Pi, or em
 - Node.js,
 - Serialport Node module,
 - Queue Node module,
-- [RFXcom Node module](https://github.com/rfxcom/node-rfxcom) (deprecated, not used in current version) by and credited to Maxwell Hadley - @rfxcom,
+- [RFXcom Node module](https://github.com/rfxcom/node-rfxcom) (deprecated, not used in current version) by and credited to Maxwell Hadley - [@rfxcom](https://github.com/rfxcom),,
 - [PS4-waker Node module](https://github.com/dhleong/ps4-waker) by and credited to Daniel Leong - [@dhleong](https://github.com/dhleong),
 - Apache2 web server,
 - PHP5,
@@ -122,22 +122,22 @@ var buffer = [0x0a, defines.LIGHTING5, 0x11, seqnbr,device.idBytes[0], device.id
 ```
 Following devices were set up in RFXmngr:
 - power strip with entertainment center connected: 
- - type: "Lighting4", 
- - subtype: "PT2262", 
- - "off" code: 555554, dec 5592404, S1-S24: 0101 0101 0101 0101 0101 0100, pulse 322,
- - "on" code: 555557, dec 5592407, S1-S24: 0101 0101 0101 0101 0101 0111, pulse 322,
+    - type: "Lighting4", 
+    - subtype: "PT2262", 
+    - "off" code: 555554, dec 5592404, S1-S24: 0101 0101 0101 0101 0101 0100, pulse 322,
+    - "on" code: 555557, dec 5592407, S1-S24: 0101 0101 0101 0101 0101 0111, pulse 322,
 - smart socket with humifier connected: 
- - type: "Lighting5", 
- - subtype:"Kangtai, Cotech",
- - unit: "1",
- - ID: "5D0C",
- - commands: "on", "off".
+    - type: "Lighting5", 
+    - subtype:"Kangtai, Cotech",
+    - unit: "1",
+    - ID: "5D0C",
+    - commands: "on", "off".
 - window blind motors:
- - type: "Blinds1",
- - subtype: "BlindsT6",
- - ID (chosen by user preferences): XX XX XX X,
- - unit codes: "0" - all devices in the group, "1"-"3" - blinds in particular rooms,
- - commands: "open", "close", "stop", "confirm" (this one for remote setup - user can find remote manual in this repository's Prerequisites folder.
+    - type: "Blinds1",
+    - subtype: "BlindsT6",
+    - ID (chosen by user preferences): XX XX XX X,
+    - unit codes: "0" - all devices in the group, "1"-"3" - blinds in particular rooms,
+    - commands: "open", "close", "stop", "confirm" (this one for remote setup - user can find remote manual in this repository's Prerequisites folder.
 ### Web Server
 Apache server with PHP and PHP cURL are used by the project to host the app:
 ```
