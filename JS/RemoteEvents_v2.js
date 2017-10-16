@@ -447,7 +447,7 @@ $(function() {
             */
             strip_on = false;
             document.getElementById('Kamera').setAttribute('href','PHP/Cam_v2.php?strip_on='+strip_on);
-            $("#nav a:not(.active,#Kamera)").addClass('transparent');
+            $("#nav a:not(.active,#Kamera,#Odśwież)").addClass('transparent');
         }
     });
 });

@@ -22,7 +22,11 @@ $(function() {
     $("#nav a:not(#Kamera)").click(function() {
         if (!$(this).hasClass('transparent')) {
             target_link = this.id;
-            $(this).attr('href','/BrowarRemote_v2.php?target_link='+target_link);
+            if (target_link === "Odśwież") {
+                $(this).attr('href','/BrowarRemote_v2.php');
+            } else {
+                $(this).attr('href','/BrowarRemote_v2.php?target_link='+target_link);
+            }
         }
     });
 });
