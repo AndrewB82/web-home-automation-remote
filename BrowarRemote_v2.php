@@ -10,6 +10,7 @@ not implemented currently),
 - "TV" - remote with only TV power toggle implemented, as other media operations are handled by AVR,
 - "PS4" - Sony Plasystation 4 remote with Power On, Power Off, and PS button long press included,
 - "Sceny" - Polish word for "Scenes" - currrently starting of Harmony Activities is implemented.
+- "Odśwież" - Polish word for "Refresh" - site refresh feature.
 -->
 
 <html>
