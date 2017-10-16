@@ -31,6 +31,8 @@ not implemented currently),
 <link rel="apple-touch-icon" sizes="144x144" href="Graphics/apple-touch-icon-144x144.png"/>
 <link rel="apple-touch-icon" sizes="152x152" href="Graphics/apple-touch-icon-152x152.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="Graphics/apple-touch-icon-180x180.png"/>
+// Inline script below by and credited to Irae Carvalho (https://github.com/irae):
+<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(chref=d.href).replace(e.href,"").indexOf("#")&&(!/^[a-z\+\.\-]+:/i.test(chref)||chref.indexOf(e.protocol+"//"+e.host)===0)&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");</script>
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="JS/RemoteFunctions_v2.js"></script>
 <script src="JS/RemoteEvents_v2.js"></script>
