@@ -139,7 +139,7 @@ function checkAmplituner(path) {
             if (this.responseText.startsWith("TX")) {
                 strip_on = true;
                 document.getElementById('Kamera').setAttribute('href','PHP/Cam_v2.php?strip_on='+strip_on);
-                $("#nav a:not(.active,#Kamera)").removeClass('transparent');
+                $("#nav a:not(.active,#Kamera,#Odśwież)").removeClass('transparent');
                 zones_str = this.responseText.trim();
                 zones_str = zones_str.replace(/on/g,"1");
                 zones_str = zones_str.replace(/standby,off/g,"0");
