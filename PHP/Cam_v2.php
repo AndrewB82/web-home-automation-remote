@@ -23,8 +23,9 @@ Foscam "GUEST" privilleges are sufficient in this case.  -->
     <li class="col-4"><a id="TV" class="myButtonYellow" href="/BrowarRemote_v2.php">TV</a></li>
     <li class="col-4"><a id="PlayStation" class="myButtonYellow" href="/BrowarRemote_v2.php">PS4</a></li>
     <li class="col-4"><a id="Dom" class="myButtonYellow active" href="/BrowarRemote_v2.php">Dom</a></li>
-    <li class="col-6"><a id="Kamera" class="myButtonYellow">Kamera</a></li>
-    <li class="col-6"><a id="Sceny" class="myButtonYellow" href="/BrowarRemote_v2.php">Sceny</a></li>
+    <li class="col-4"><a id="Kamera" class="myButtonYellow">Kamera</a></li>
+    <li class="col-4"><a id="Sceny" class="myButtonYellow" href="/BrowarRemote_v2.php">Sceny</a></li>
+    <li class="col-4"><a id="Odśwież" class="myButtonBlue" href="/BrowarRemote_v2.php">Odśwież</a></li>
 </ul>
 <div class="section" id="KameraDziewczynek">
     <div class="col-12 myCaption">Pokój Dziewczynek</div>
