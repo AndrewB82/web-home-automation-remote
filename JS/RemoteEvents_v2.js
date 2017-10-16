@@ -32,10 +32,11 @@ Thermostats polling is performed in above checkLampArray function (in fact it is
     }
 });
 
-/*Top navigation panel button handlers. Active panel is colored red. If "Home" (Polish language: "Dom") panel is active and any adjustable lighting is powered on, a color picker panel appears.*/
+/*Top navigation panel button handlers. Active panel is colored red. If "Home" (Polish language: "Dom") panel is active
+and any adjustable lighting is powered on, a color picker panel appears.*/
 
 $(function() {
-    $("#nav a ").click(function() {
+    $("#nav a:not(#Odśwież)").click(function() {
         if (!$(this).hasClass('transparent')) {
             setActiveLink(this.id);
 		    if (!jQuery.isEmptyObject(curs)) {
@@ -45,6 +46,14 @@ $(function() {
 		        showLampPanel();
 		    }		    
         }
+    });
+});
+
+/*Site rfresh button handling for iOs "standalone app" view.*/
+
+$(function() {
+    $(#Odśwież).click(function() {
+        location.reload();
     });
 });
 
