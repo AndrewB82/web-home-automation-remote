@@ -8,11 +8,11 @@ $(document).ready(function() {
     strip_on = (GetURLParameter('strip_on') === 'true');
     setActiveLink("Kamera");        
     if (!strip_on) {
-        $("#nav a:not(.active,#Dom)").addClass('transparent');
-        $("#nav a:not(.active,#Dom)").removeAttr('href');
+        $("#nav a:not(.active,#Dom,#Odśwież)").addClass('transparent');
+        $("#nav a:not(.active,#Dom,#Odśwież)").removeAttr('href');
     } else {
-        $("#nav a:not(.active,#Dom)").removeClass('transparent');
-        $("#nav a:not(.active,#Dom)").attr('href','/BrowarRemote_v2.php');
+        $("#nav a:not(.active,#Dom,#Odśwież)").removeClass('transparent');
+        $("#nav a:not(.active,#Dom,#Odśwież)").attr('href','/BrowarRemote_v2.php');
     }
 });
 
