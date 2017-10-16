@@ -44,8 +44,9 @@ not implemented currently),
     <li class="col-4"><a id="TV" class="myButtonYellow">TV</a></li>
     <li class="col-4"><a id="PlayStation" class="myButtonYellow">PS4</a></li>
     <li class="col-4"><a id="Dom" class="myButtonYellow">Dom</a></li>
-    <li class="col-6"><a id="Kamera" class="myButtonYellow" href="PHP/Cam_v2.php">Kamera</a></li>
-    <li class="col-6"><a id="Sceny" class="myButtonYellow">Sceny</a></li>
+    <li class="col-4"><a id="Kamera" class="myButtonYellow" href="PHP/Cam_v2.php">Kamera</a></li>
+    <li class="col-4"><a id="Sceny" class="myButtonYellow">Sceny</a></li>		
+    <li class="col-4"><a id="Odśwież" class="myButtonBlue">Odśwież</a></li>
 </ul>
 <div id="PHPConnections">
     <div id="Amplituner" style="display: none">
