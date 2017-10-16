@@ -49,10 +49,10 @@ $(function() {
     });
 });
 
-/*Site rfresh button handling for iOs "standalone app" view.*/
+/*Site refresh button handling for iOs "standalone app" view.*/
 
 $(function() {
-    $(#Odśwież).click(function() {
+    $("#Odśwież").click(function() {
         location.reload();
     });
 });
