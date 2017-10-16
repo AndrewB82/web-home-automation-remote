@@ -124,7 +124,7 @@ function communicateNodeJSServer(path) {
         */
         strip_on = false;
         document.getElementById('Kamera').setAttribute('href','PHP/Cam_v2.php?strip_on='+strip_on);
-        $("#nav a:not(.active,#Kamera)").addClass('transparent');
+        $("#nav a:not(.active,#Kamera,#Odśwież)").addClass('transparent');
     }
 }
 
@@ -170,7 +170,7 @@ function checkAmplituner(path) {
             } else {
                 strip_on = false;
                 document.getElementById('Kamera').setAttribute('href', 'PHP/Cam_v2.php?strip_on='+strip_on);
-                $("#nav a:not(.active,#Kamera)").addClass('transparent');
+                $("#nav a:not(.active,#Kamera,#Odśwież)").addClass('transparent');
                 zones[0]=0;
                 zones[1]=0;
                 zones[2]=0;
