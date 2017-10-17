@@ -370,7 +370,7 @@ not implemented currently),
             <div class="col-6"><a id="Lampy1" class="myButtonYellow">Lampa w salonie</a></div>
             <div class="col-6"><a id="Lampy9" class="myButtonYellow">Lampki w kuchni</a></div>
             <div class="col-6"><a id="Lampy4" class="myButtonYellow">Lampa w pokoju Dziewczynek</a></div>
-            <div class="col-6"><a id="Fibaro36" class="myButtonYellow">Lampka na biurku</a></div>
+            <div class="col-6"><a id="Fibaro36" class="myButtonYellow">Lampka nocna</a></div>
             <div class="col-4"><a id="Lampy8" class="myButtonYellow">Lampa w sypialni</a></div>
             <div class="col-4"><a id="Lampy7" class="myButtonYellow">HuGo</a></div>
             <div class="col-4"><a id="Fibaro23" class="myButtonYellow">LEDy w sypialni</a></div>         
