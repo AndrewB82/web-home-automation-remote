@@ -62,7 +62,8 @@ The following software was used in the project, installed on Raspberry Pi, or em
 - CountDown function with small amendments using code from [W3schools](https://www.w3schools.com): https://www.w3schools.com/howto/howto_js_countdown.asp,
 - function for getting parameter from URL by and credited to [JQUERYBYEXAMPLE](http://www.jquerybyexample.net/), http://www.jquerybyexample.net/2012/06/get-url-parameters-using-jquery.html,
 - functions for embedding and handling IP camera live view, credited to [the Mad Hermit](http://www.themadhermit.net), http://www.themadhermit.net/how-to-embed-video-from-your-foscam-fi9821w-wireless-camera-into-your-web-page/,
-- [script to prevent internal links to a "webapp" added to iPhone home screen to open in Safari instead of navigating internally](https://gist.github.com/irae/1042167) by and credited to [Irae Carvalho](https://github.com/irae).
+- [script to prevent internal links to a "webapp" added to iPhone home screen to open in Safari instead of navigating internally](https://gist.github.com/irae/1042167) by and credited to [Irae Carvalho](https://github.com/irae)
+with small modification: additional condition (d.href!="") added in order to exclude links associated with remote buttons.
 ### Graphics
 App icons prepared with iconifier.net
 
