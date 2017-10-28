@@ -25,7 +25,7 @@ The following devices are used in the project:
 - EXTRA: Amazon Echo Dot for providing voice commands for the whole system.
 #### Devices controlled
 - RF 433 mhz power strip that provides power for my home entertainment system,   
-- RF 433 mhz smart socket providing power for air humifier,
+- RF 433 mhz smart socket providing power for air humidifier,
 - RF 433 mhz window blind motors with YOODA compatible DC306 remote (remote programming manual can be found in this repository),
 - Philips Hue lighting: multiple bulbs and color spots grouped in lamps + Hue Go lamp,
 - Zigbee lighting compatible with Philips Hue found on AliExpress, e.g. [here](https://www.aliexpress.com/item/Jiawen-Zigbee-bulb-smart-bulb-wireless-bulb-for-philip-hubs-control-by-Apple-homekit-Siri-and/32810632827.html?spm=2114.search0104.3.9.QIGuBQ&ws_ab_test=searchweb0_0,searchweb201602_4_10152_10065_10151_10068_10344_10345_10342_10343_10340_10341_10304_10307_10301_10060_10155_10154_10056_10055_10054_10059_10534_10533_10532_100031_10099_10338_10103_10102_5590020_10052_10053_10142_10107_10050_10051_10171_10084_10083_5370020_10080_10082_10081_10110_10111_10112_10113_10114_10312_10313_10314_10078_10079_10073,searchweb201603_17,ppcSwitch_2&btsid=48e6236d-6e4d-4715-ba0b-c557b9db3b5b&algo_expid=b62e7ced-8cac-4ea3-82b2-aed51b6f1fad-1&algo_pvid=b62e7ced-8cac-4ea3-82b2-aed51b6f1fad) - several bulbs grouped in lamp,
@@ -67,7 +67,7 @@ with small modification: additional condition (d.href!="") added in order to exc
 ### Graphics
 App icons prepared with iconifier.net
 
-iconifier.net is provided for free by Webilicious® Web Design and Development Services - Joomla!® website creation, 
+iconifier.net is provided for free by Webilicious® Web Design and Development Services - Joomla!® website creation,
 maintainance and security specialists - http://webilicious.com.au.
 ## Installation
 WARNING: it is assumed that "sudo" prefix is required for conducting setup operations (non-root user).
@@ -101,7 +101,7 @@ DEPRECATED in current version of the project - setup is finalised through Domoti
 
 RFXtrx433E transceiver is most easily configurable using PC running on Windows. User would probably need to install
 USB driver to connect the device to the PC. Once it is done, the transceiver firmware can be updated using RFXflash
-application and setup can be done using RFXmngr application. User can find further details in RFXtrx433E manual, which 
+application and setup can be done using RFXmngr application. User can find further details in RFXtrx433E manual, which
 can be found in this repository (Prerequisites folder).
 
 For the needs of the project only ```Lighting4``` and ```Lighting5``` protocols are enabled in RFXmngr app.
@@ -112,10 +112,10 @@ sudo npm install serialport --unsafe-perm
 sudo npm install queue
 sudo npm install rfxcom --unsafe-perm
 ```
-For project devices to work with the server, I had to slightly amend lighting4.js and lighting5.js files 
+For project devices to work with the server, I had to slightly amend lighting4.js and lighting5.js files
 in the RFXcom Node module. It was tested and worked fine with node-rfxcom module (https://github.com/rfxcom/node-rfxcom)
 version installed in June 2017. I noticed that since then the owner of the repository introduced significant
-changes to the module and my server was not tested with the current version. Amended versions of ```lighting4.js``` 
+changes to the module and my server was not tested with the current version. Amended versions of ```lighting4.js```
 and ```lighting5.js``` can be found in repository if someone was interested in using them - amendments were made
 to var buffer.
 
@@ -128,13 +128,13 @@ var buffer = [0x09, defines.LIGHTING4, self.subtype, seqnbr,data[0], data[1], da
 var buffer = [0x0a, defines.LIGHTING5, 0x11, seqnbr,device.idBytes[0], device.idBytes[1], device.idBytes[2],device.unitCode, command, 0, 0x60];
 ```
 Following devices were set up in RFXmngr:
-- power strip with entertainment center connected: 
-    - type: "Lighting4", 
-    - subtype: "PT2262", 
+- power strip with entertainment center connected:
+    - type: "Lighting4",
+    - subtype: "PT2262",
     - "off" code: 555554, dec 5592404, S1-S24: 0101 0101 0101 0101 0101 0100, pulse 322,
     - "on" code: 555557, dec 5592407, S1-S24: 0101 0101 0101 0101 0101 0111, pulse 322,
-- smart socket with humifier connected: 
-    - type: "Lighting5", 
+- smart socket with humidifier connected: 
+    - type: "Lighting5",
     - subtype:"Kangtai, Cotech",
     - unit: "1",
     - ID: "5D0C",
@@ -156,7 +156,7 @@ Change owner of the ```/usr/www``` folder to actual user:
 ```
 sudo chown <actual user> /usr/www -R
 ```
-All files from main folder of the repository, except of Prerequistes folder, should be put in ```/usr/www```. 
+All files from main folder of the repository, except of Prerequistes folder, should be put in ```/usr/www```.
 ### ONKYO eISCP
 Installation of ONKYO eISCP package with necessary dependencies. Only power and volume querying, dependant zones power on/off and setting specified volume level use this package currently.
 ```
@@ -177,7 +177,7 @@ Install the module:
 ```
 sudo npm install ps4-waker -g
 ```
-You have to pair the Raspberry Pi with iOs (tested by myself) or Android (not tested by myself) Sony PlayStation App. 
+You have to pair the Raspberry Pi with iOs (tested by myself) or Android (not tested by myself) Sony PlayStation App.
 Run the app for the first time from command line:
 ```
 sudo ps4-waker
@@ -186,14 +186,14 @@ Turn on your PS4 and go to "Add Device" tab in "Settings" section and follow on-
 
 After finishing setup, check if you see Raspberry as a device in your PS4 systems and whether credentials file is created correctly - ```.ps4-wake.credentials.json``` - it is a hidden file and should be located in user's home folder. The file should look like this:
 ```json
-{ 
- 	"client-type": "X", 
-	"auth-type": "Y", 
+{
+ 	"client-type": "X",
+	"auth-type": "Y",
 	"user-credential": "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
-} 
+}
 ```
 ### Node.js Home Server
-It is used for handling PS4 Power On/Off and application starting functions. Formerly I used it also to handle RF devices. 
+It is used for handling PS4 Power On/Off and application starting functions. Formerly I used it also to handle RF devices.
 It is a http server that listens for requests assigned to those functions.
 Download the ```homenodejsdaemon.js``` file from Prerequisites and put it in preferred folder.
 #### Run at startup
@@ -248,13 +248,13 @@ you can fill your parameters and paste it in nano editor.
 ```
 [Unit]
 Description=RESTful Harmony
-Wants=network.target 
-After=network.target 
+Wants=network.target
+After=network.target
 
 [Service]
 Type=simple
 #The line below specifies path where Restful Harmony .jar file is located - replace <path> with your actual location.
-WorkingDirectory=<path> 
+WorkingDirectory=<path>
 #The line below specifies path to the app itself - replace <path> with your actual location, as well as your Harmony Hub ip - replace <Harmony Hub IP> with actual address.
 ExecStart=/usr/bin/java -jar <path>/restful-harmony-1.0.0.jar <Harmony Hub IP>
 
@@ -272,7 +272,7 @@ sudo systemctl start restfulharmony.service
 It is a brilliant tool that complements and supports your own home automation system. It emulates Philips Hue bridge behind which one can embak almost every kind of device able to communicate over network.
 They are all seen as Philips Hue lights operated by On, Off and Dim commands for which you can assign various network requests.
 For installation follow guide at: https://github.com/bwssytems/ha-bridge.
-For the need of the project I simply downloaded the .jar file. 
+For the need of the project I simply downloaded the .jar file.
 You should also pay special attention to the section ["Run ha-bridge alongside web server already on port 80"](https://github.com/bwssytems/ha-bridge#run-ha-bridge-alongside-web-server-already-on-port-80).
 
 IMPORTANT: running for the first time from command line, I used port number parameter -Dserver.port=<port number> as HA Bridge runs on default port 80 and there is already Apache listening on that port, and Domoticz listening on 8080:
@@ -331,7 +331,7 @@ Message Body:
 ```json
 {"devicetype":"my_hue_app#<device> <user name>"}
 ```
-A POST request should be sent, and username will be returned in response. 
+A POST request should be sent, and username will be returned in response.
 It must be implemented in the code and used in every Hue Api request sending commands to Hue and compatible lighting, e.g.:
 ```
 http://<bridge ip address>/api/<username>/lights
