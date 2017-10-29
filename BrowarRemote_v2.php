@@ -257,7 +257,7 @@ not implemented currently),
         <div class="col-4"><a id="Stop" class="myButtonBlue">&#x25a0</a></div>
         <div class="col-4"><a id="NextTrack" class="myButtonBlue">Next</a></div>
         <div class="col-4"><a id="Rewind" class="myButtonBlue">Rewind</a></div>
-        <div class="col-4"><a id="Play" class="myButtonBlue">&#x25ba/&#x2016</a></div>
+        <div class="col-4"><a id="Pause" class="myButtonBlue">&#x2016</a></div>
         <div class="col-4"><a id="FastForward" class="myButtonBlue">Fast Forward</a></div>
         <div class="col-12"><a id="Play" class="myButtonBlue">&#x25ba</a></div>
       </div>
