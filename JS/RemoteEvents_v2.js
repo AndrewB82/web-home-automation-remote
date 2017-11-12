@@ -23,7 +23,7 @@ HA Bridge user id obtaining for later communication with PS4. Remember to set ac
 /*
 Thermostats polling is performed in above checkLampArray function (in fact it is z-wave device array, not only z-wave lamp array). Only one thermostat currently at my place, with id#18 assigned to request response, below its parameters assigned to global variables. Id could be checked and programmed dynamically, not fixed assignment as it poses risks in case of z-wave network modifications, but I find value added marginal compared to static assignment and eventual manual code corrections.
 */
-    thermostats["Salon"] = [Number(RESTresponse["contents"][18]["id"]),Number(RESTresponse["contents"][18]["properties"]["targetLevel"]),Number(RESTresponse["contents"][18]["properties"]["timestamp"])];
+    thermostats["Salon"] = [Number(RESTresponse["contents"][4]["id"]),Number(RESTresponse["contents"][4]["properties"]["targetLevel"]),Number(RESTresponse["contents"][4]["properties"]["timestamp"])];
     $('input[type=range]#TemperaturaSalon').val(thermostats["Salon"][1]);
     displayThermostat("Salon");
     emptyObject(RESTresponse);

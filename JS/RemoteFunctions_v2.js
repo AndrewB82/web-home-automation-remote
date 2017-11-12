@@ -333,7 +333,7 @@ function checkLampArray() {
     communicateREST("/PHP/ba-simple-proxy.php?url=<Fibaro HC2 IP>:<Fibaro HC2 port>/api/devices","GET","",RESTcallback,false);
     lights[23] = Number((RESTresponse["contents"][1]["properties"]["value"] === "true") || (Number(RESTresponse["contents"][1]["properties"]["value"]) > 0));
     toggleLamp("Fibaro23","Fibaro");
-    lights[36] = Number((RESTresponse["contents"][6]["properties"]["value"] === "true") || (Number(RESTresponse["contents"][6]["properties"]["value"]) > 0));
+    lights[36] = Number((RESTresponse["contents"][2]["properties"]["value"] === "true") || (Number(RESTresponse["contents"][2]["properties"]["value"]) > 0));
     toggleLamp("Fibaro36","Fibaro");
     if (!lights.some(checkAnyLampOn)) {
         any_lamp_on = false;
